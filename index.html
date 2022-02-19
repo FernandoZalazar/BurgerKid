@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SCRIPT DE VUE -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <title>BurgerKid</title>
+</head>
+
+<body>
+    <div id="app">
+        <!--<h1 v-html="text"> coder</h1>
+
+        <ul v-html="items"> hola loco</ul>
+
+        <img :src="imgUrl" v-blind:[key]="alt">
+
+        <button type="button" v-on:Click="saludar">
+            mostrar saludo
+        </button>
+
+        <button type="button" v-on:Click="saludarDos ($event)" >
+            mostrar saludodos
+        </button>
+
+        <button type="button" v-on:Click="showName" >
+            mostrar nombre
+        </button>
+
+        <div class="content">
+            {{nombreCompleto}}
+        </div>-->
+        
+        <div class="contadordiv">
+
+        <button class="menos contstyle" @click="counter -= 1">-</button>
+        <p class="cont">{{ counter }}</p>
+        <button class="mas contstyle" @click="counter += 1">+</button>
+
+        </div>
+        
+    </div>
+    
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data:{
+                text: 'BurgerKid',
+                items: '<li>La mejor hamburgesa para los chicos</li>',
+                imgUlr:'',
+                alt:'BurgerKid',
+                key: 'title',
+                firstName: 'Burger',
+                lastName: 'kid',
+                counter: 0
+            },
+            methods: {
+                saludar () {
+                    alert('Hola');
+                },
+                saludarDos(event) {
+                    alert('Coodernadas del boton' + event.screenX + ' ' + event.screenY);
+                },
+                showName() {
+                    alert(this.firstName + '' + this.lastName); 
+                }
+            },
+            computed: {
+                nombreCompleto(){
+                    return this.firstName +'' + this.lastName;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
