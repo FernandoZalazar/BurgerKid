@@ -9,6 +9,10 @@
 
     <link rel="stylesheet" href="styles.css">
     <title>BurgerKid</title>
+    <script src="components/saludo.js"></script>
+    <script src="components/padre.js"></script>
+    <script src="components/hijo.js"></script>
+    <script src="components/componente1.js"></script>
 </head>
 
 <body>
@@ -36,19 +40,28 @@
         </div>-->
         
         <div class="contadordiv">
-
-        <button class="menos contstyle" @click="counter -= 1">-</button>
-        <p class="cont">{{ counter }}</p>
-        <button class="mas contstyle" @click="counter += 1">+</button>
-
+            <button class="menos contstyle" @click="counter -= 1">-</button>
+            <p class="cont">{{ counter }}</p>
+            <button class="mas contstyle" @click="counter += 1">+</button>
         </div>
+
+        <saludo> </saludo>
+
+        <componente1 :array="newArray" :boolean="boolean" :style="newStyle"></componente1>
         
+
+
     </div>
     
     <script>
         const app = new Vue({
             el: '#app',
+            
             data:{
+                newArray:[1,2,3,4],
+                boolean:true,
+                newStyle:"background-color:red;",
+
                 text: 'BurgerKid',
                 items: '<li>La mejor hamburgesa para los chicos</li>',
                 imgUlr:'',
