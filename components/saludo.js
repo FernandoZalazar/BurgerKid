@@ -1,4 +1,4 @@
-Vue.component = ('saludo', {
+Vue.components ('saludo', {
     template: //html
     `
     <section>

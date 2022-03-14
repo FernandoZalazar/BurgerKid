@@ -1,4 +1,4 @@
-Vue.component('padre', {
+Vue.components ('padre', {
     template: //html
     `
     <section>

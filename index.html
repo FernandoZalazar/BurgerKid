@@ -8,49 +8,21 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
 
     <link rel="stylesheet" href="styles.css">
-    <title>BurgerKid</title>
+    
     <script src="components/saludo.js"></script>
     <script src="components/padre.js"></script>
     <script src="components/hijo.js"></script>
-    <script src="components/componente1.js"></script>
+    
+    <title>BurgerKid</title>
 </head>
 
 <body>
     <div id="app">
-        <!--<h1 v-html="text"> coder</h1>
+        <saludo></saludo>
 
-        <ul v-html="items"> hola loco</ul>
+        <padre></padre>
 
-        <img :src="imgUrl" v-blind:[key]="alt">
-
-        <button type="button" v-on:Click="saludar">
-            mostrar saludo
-        </button>
-
-        <button type="button" v-on:Click="saludarDos ($event)" >
-            mostrar saludodos
-        </button>
-
-        <button type="button" v-on:Click="showName" >
-            mostrar nombre
-        </button>
-
-        <div class="content">
-            {{nombreCompleto}}
-        </div>-->
-        
-        <div class="contadordiv">
-            <button class="menos contstyle" @click="counter -= 1">-</button>
-            <p class="cont">{{ counter }}</p>
-            <button class="mas contstyle" @click="counter += 1">+</button>
-        </div>
-
-        <saludo> </saludo>
-
-        <componente1 :array="newArray" :boolean="boolean" :style="newStyle"></componente1>
-        
-
-
+        <hijo></hijo>
     </div>
     
     <script>
@@ -58,18 +30,7 @@
             el: '#app',
             
             data:{
-                newArray:[1,2,3,4],
-                boolean:true,
-                newStyle:"background-color:red;",
-
-                text: 'BurgerKid',
-                items: '<li>La mejor hamburgesa para los chicos</li>',
-                imgUlr:'',
-                alt:'BurgerKid',
-                key: 'title',
-                firstName: 'Burger',
-                lastName: 'kid',
-                counter: 0
+                saludo: 'Adios mundo'
             },
             methods: {
                 saludar () {
