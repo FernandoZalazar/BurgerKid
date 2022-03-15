@@ -1,15 +1,13 @@
-Vue.components ('saludo', {
+Vue.component ('saludo', {
     template: //html
-    `
-    <section>
+    `<section>
         <h1>{{saludo}}</h1>
-        <p>Soy hacker</p>
+        <p>Estas en el lugar que queres</p>
 
-    </section>
-    `,
+    </section>`,
     data() {
         return {
-            saludo: 'Adios mundo'
+            saludo: 'BURGER KID'
         }
     }
 })

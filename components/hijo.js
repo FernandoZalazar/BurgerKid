@@ -1,17 +1,17 @@
-Vue.components ('padre', {
+Vue.component ('hijo', {
     template: //html
     `
     <section>
-        <h4>Componente padre</h4>
-    </section>
-    <h5>{{numero}}</h5>
+        <h4>Conoce mas de nuestra comunidad</h4>
+        <h5>{{numero}}</h5>
 
-    <p>{{nombre}}</p>
+        <p>{{nombre}}</p>
+    </section>
     `,
     props: ['numero'],
     data() {
         return {
-            nombre:'BurgerKid'
+            nombre:'BurgerKid, marca registrada'
         }
     }
 })
